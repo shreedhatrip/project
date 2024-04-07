@@ -1,0 +1,5 @@
+1 Apple 10 1.50
+2 Banana 20 0.75
+3 Orange 15 1.25
+4 Pear 12 1.00
+5 Watermelon 5 3.50
