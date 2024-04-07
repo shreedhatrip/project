@@ -1,0 +1,1 @@
+The project is a grocery store billing system which is implemented in c.The user can enter customer details like ID,name,contact information and it displays a list if items which are available along thier description,prices etc.The program calculates the total bill.
