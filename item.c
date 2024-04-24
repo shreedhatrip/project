@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "item.h"
 
 #define MAX_ITEMS 100
@@ -33,4 +34,3 @@ void displayItems(int customerId, const char* customerName, const char* customer
                 items[i].id, items[i].description, items[i].stock, items[i].price);
     }
 }
-
