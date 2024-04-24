@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "customer.h"
 
@@ -14,10 +15,8 @@ void addCustomer(int id, const char* name, const char* contact) {
     }
 
     customers[numCustomers].id = id;
-    strncpy(customers[numCustomers].name, name, sizeof(customers[numCustomers].name) - 1);
-    customers[numCustomers].name[sizeof(customers[numCustomers].name) - 1] = '\0'; // Ensure null-termination
-    strncpy(customers[numCustomers].contact, contact, sizeof(customers[numCustomers].contact) - 1);
-    customers[numCustomers].contact[sizeof(customers[numCustomers].contact) - 1] = '\0'; // Ensure null-termination
+    strcpy(customers[numCustomers].name, name);
+    strcpy(customers[numCustomers].contact, contact);
     numCustomers++;
 }
 
