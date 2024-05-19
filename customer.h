@@ -9,5 +9,6 @@ typedef struct {
 
 void addCustomer(int id, const char* name, const char* contact);
 void displayCustomers();
+Customer* findCustomerById(int id);
 
 #endif
