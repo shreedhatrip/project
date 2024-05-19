@@ -41,5 +41,5 @@ Customer* findCustomerById(int id) {
             return &customers[i];
         }
     }
-    return NULL; // Customer not found
+    return NULL; 
 }
