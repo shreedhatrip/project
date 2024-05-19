@@ -14,14 +14,14 @@ int main() {
     scanf("%d", &customerId);
 
     printf("Name: ");
-    scanf("%s", name); // Assuming name does not contain spaces
+    scanf("%s", name); 
 
     printf("Contact: ");
-    scanf("%s", contact); // Assuming contact does not contain spaces
+    scanf("%s", contact); 
 
     addCustomer(customerId, name, contact);
 
-    // Display items along with customer details
+  
     displayItems(customerId, name, contact);
     displayCustomers();
 
