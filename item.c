@@ -34,3 +34,20 @@ void displayItems(int customerId, const char* customerName, const char* customer
                 items[i].id, items[i].description, items[i].stock, items[i].price);
     }
 }
+
+void addItemToFile(int id, const char* description, int stock, float price) {
+    FILE *file = fopen("items.txt", "a");
+    if (file != NULL) {
+        fprintf(file, "%d %s %d %.2f\n", id, description, stock, price);
+        fclose(file);
+    }
+}
+
+Item* findItemById(int id) {
+    for (int i = 0; i < numItems; i++) {
+        if (items[i].id == id) {
+            return &items[i];
+        }
+    }
+    return NULL; 
+}
