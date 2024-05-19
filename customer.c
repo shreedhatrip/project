@@ -18,6 +18,13 @@ void addCustomer(int id, const char* name, const char* contact) {
     strcpy(customers[numCustomers].name, name);
     strcpy(customers[numCustomers].contact, contact);
     numCustomers++;
+
+    // Write customer data to file
+    FILE *file = fopen("customers.txt", "a");
+    if (file != NULL) {
+        fprintf(file, "%d %s %s\n", id, name, contact);
+        fclose(file);
+    }
 }
 
 void displayCustomers() {
@@ -26,4 +33,13 @@ void displayCustomers() {
         printf("ID: %d, Name: %s, Contact: %s\n",
                 customers[i].id, customers[i].name, customers[i].contact);
     }
+}
+
+Customer* findCustomerById(int id) {
+    for (int i = 0; i < numCustomers; i++) {
+        if (customers[i].id == id) {
+            return &customers[i];
+        }
+    }
+    return NULL; // Customer not found
 }
