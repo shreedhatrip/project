@@ -10,5 +10,6 @@ typedef struct {
 
 void readItemsFromFile(const char* filename);
 void displayItems(int customerId, const char* customerName, const char* customerContact);
+Item* findItemById(int id);
 
 #endif
